@@ -52,9 +52,17 @@ There is zero check on the date provided. User can select a future date or date 
 
 ## Installation
 
+*Server*
+
+NestJS app.
+Migrations are already generated but you can still run the generate command, won't do anything.
+Then run the migrate command to create database schema.
+
 ```bash
 cd server
 npm install
+npm run generate
+npm run migrate
 ```
 
 ```bash
@@ -84,6 +92,16 @@ Only supported for server
 ```bash
 cd server
 npm test
+```
+
+
+## Inject fake data
+
+If you want to try out the app with loads of fake data you can invoke the script that will fill up the database with fake data:
+
+```bash
+cd server
+npx tsx src/database/create-fake-data.ts
 ```
 
 ## Production build
