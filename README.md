@@ -8,6 +8,10 @@ The project is using nestjs for the server and vite bundler with react on the cl
 
 Server port is assumed to be 3000 for the client to work.
 
+
+[Screen cast of the install and demo](screen-cast.webm)
+
+
 ## In this app
 
 - Entry of a new sleep tracking
