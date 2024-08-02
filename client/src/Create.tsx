@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query"
+import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { FieldValues, useForm } from "react-hook-form"
 import { Button } from "./components/ui/button"
 import clsx from "clsx"
@@ -11,6 +11,7 @@ const headers = new Headers({
 
 export function Create() {
   const { register, handleSubmit } = useForm()
+  const queryClient = useQueryClient()
 
   const { mutate, isError, isPending, isSuccess, error, variables, reset } =
     useMutation({
@@ -39,6 +40,9 @@ export function Create() {
           mutate(values, {
             onSuccess() {
               setShowForm(false)
+              queryClient.invalidateQueries({
+                queryKey: ["sleep-tracker-list"],
+              })
             },
           })
         })}
