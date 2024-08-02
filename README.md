@@ -9,7 +9,8 @@ The project is using nestjs for the server and vite bundler with react on the cl
 Server port is assumed to be 3000 for the client to work.
 
 
-[Screen cast of the install and demo](screen-cast.webm)
+https://github.com/user-attachments/assets/cfb50c02-f23b-4346-a048-0769a9641eaa
+
 
 
 ## In this app
